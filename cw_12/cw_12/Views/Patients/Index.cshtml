@@ -1,0 +1,17 @@
+﻿@model  IEnumerable<Patient>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista pacjentów</h1>
+
+<table>
+    @foreach(var p in Model)
+    {
+    <tr>
+        <td>@p.FirstName</td>
+        <td>@p.LastName</td>
+        <td>@p.Birthdate</td>
+    </tr>
+    }
+</table>
