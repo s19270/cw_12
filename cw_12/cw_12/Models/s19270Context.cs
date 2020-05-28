@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using cw_12.AbstractModels;
 
 namespace cw_12.Models
 {
@@ -163,5 +164,7 @@ namespace cw_12.Models
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<cw_12.AbstractModels.PatMed> PatMed { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace cw_12.AbstractModels
 {
     public class PatMed
     {
+        public int id { get; set; }
         public Patient pat { get; set; }
         public List<Medicament> med;
     }

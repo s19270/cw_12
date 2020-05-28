@@ -1,0 +1,36 @@
+﻿@model cw_12.AbstractModels.PatMed
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PatMed</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pat.FirstName)
+        </dt>
+        <dd class="col-sm-20">
+            @Html.DisplayFor(model => model.pat.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pat.LastName)
+        </dt>
+        <dd class="col-sm-20">
+            @Html.DisplayFor(model => model.pat.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pat.Birthdate)
+        </dt>
+        <dd class="col-sm-20">
+            @Html.DisplayFor(model => model.pat.Birthdate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.pat.IdPatient">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

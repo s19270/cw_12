@@ -122,6 +122,7 @@ namespace cw_12.Controllers
             }
             var prescription = _context.Prescription.Where(p => p.IdPatient == patient.IdPatient);
             PatMed patmed = new PatMed();
+            patmed.id = patient.IdPatient;
             foreach (var p in prescription)
             {
                 var pres_med = _context.PrescriptionMedicament.Where(a => a.IdPrescription == p.IdPrescription);
